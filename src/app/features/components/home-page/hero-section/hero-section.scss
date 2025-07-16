@@ -123,13 +123,13 @@
     &.layer-4 {
       z-index: 4;
       animation-name: float-4;
-      transform: translate(-80px, 50px) rotate(30deg);
+      transform: translate(-80px, 50px) rotate(-1deg);
 
       @media (max-width: 992px) {
-        transform: translate(-60px, 40px) rotate(30deg);
+        transform: translate(-60px, 40px) rotate(-1deg);
       }
       @media (max-width: 768px) {
-        transform: translate(-40px, 30px) rotate(30deg);
+        transform: translate(-40px, 30px) rotate(-1deg);
       }
     }
   }
