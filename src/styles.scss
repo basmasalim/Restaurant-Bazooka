@@ -2,3 +2,6 @@
 @use './styles/_variables' as *;
 @use './styles/_fonts' as *;
 
+.cr{
+    cursor: pointer !important;
+}
