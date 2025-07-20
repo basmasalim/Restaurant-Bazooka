@@ -1,0 +1,82 @@
+@use "../../../../../styles/variables" as *;
+@use "../../../../../styles/fonts" as *;
+
+section {
+  background: url("/images/home-page/special-offers/imgi_61_news_bg.png")
+    no-repeat center/cover;
+
+  position: relative;
+  top: -20px;
+  padding: 50px 0;
+  z-index: 1;
+
+  .secondTitle {
+    font-family: $font-barlow;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: $color-secondary;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .items {
+    margin-top: 50px;
+
+    .item {
+      background-color: #ffffff7b;
+      margin: 15px;
+      padding: 30px 0;
+      border: dashed 1px #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: $color-primary;
+        transform: translateY(-20px);
+      }
+
+      .product-btn .btn {
+        background: #fff;
+        color: #e7272d;
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+        border: 1px solid #eee;
+        transition: all 0.5s ease;
+      }
+
+      img {
+        margin-top: 1rem;
+        transition: transform 0.5s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      &:hover .title,
+      &:hover .description,
+      &:hover .price {
+        color: white !important;
+      }
+
+      &:hover .product-btn .btn {
+        background: $color-yellow;
+        color: $color-secondary;
+        border: none;
+      }
+    }
+  }
+}
+
+swiper-container::part(bullet-active) {
+  background-color: $color-primary;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+swiper-container::part(button-next),
+swiper-container::part(button-prev) {
+  color: $color-primary;
+  width: 50px;
+  height: 50px;
+}

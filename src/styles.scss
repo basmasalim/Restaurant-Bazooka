@@ -1,7 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
-@use './styles/_variables' as *;
-@use './styles/_fonts' as *;
+@use "./styles/_variables" as *;
+@use "./styles/_fonts" as *;
+@use "swiper/swiper-bundle.min.css";
 
-.cr{
-    cursor: pointer !important;
+.primary-color {
+  color: $color-primary;
+}
+
+.color-secondary {
+  color: $color-secondary;
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+}
+
+.barlow-font {
+  font-family: "Barlow", sans-serif;
+}
+
+.permanentMarker-font {
+  font-family: "Permanent Marker", cursive;
+}
+
+.cr {
+  cursor: pointer !important;
 }
