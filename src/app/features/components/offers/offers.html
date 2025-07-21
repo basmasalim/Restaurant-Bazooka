@@ -1,33 +1,23 @@
 <section class="mt-2">
   <div class="container">
     <div class="row g-4">
+      @for (offer of Offers.slice(0, 2); track $index) {
       <div class="col-lg-6">
         <figure>
-          <img src="images/home-page/offers/1.png" alt="offer" class="w-100" />
+          <img [src]="offer" alt="offer" class="w-100" />
         </figure>
       </div>
-      <div class="col-lg-6">
-        <figure>
-          <img src="images/home-page/offers/2.png" alt="offer" class="w-100" />
-        </figure>
-      </div>
+      }
     </div>
-    <div class="row g-4">
+
+    <div class="row g-4 mt-1">
+      @for (offer of Offers.slice(2, 5); track $index) {
       <div class="col-lg-4">
         <figure>
-          <img src="images/home-page/offers/3.png" alt="offer" class="w-100" />
+          <img [src]="offer" alt="offer" class="w-100" />
         </figure>
       </div>
-      <div class="col-lg-4">
-        <figure>
-          <img src="images/home-page/offers/4.png" alt="offer" class="w-100" />
-        </figure>
-      </div>
-      <div class="col-lg-4">
-        <figure>
-          <img src="images/home-page/offers/5.png" alt="offer" class="w-100" />
-        </figure>
-      </div>
+      }
     </div>
   </div>
 </section>
