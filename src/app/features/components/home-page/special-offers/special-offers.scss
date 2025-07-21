@@ -8,16 +8,7 @@ section {
   position: relative;
   top: -20px;
   padding: 50px 0;
-  z-index: 1;
-
-  .secondTitle {
-    font-family: $font-barlow;
-    font-weight: 900;
-    font-size: 3.5rem;
-    color: $color-secondary;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
+  z-index: 5;
 
   .items {
     margin-top: 50px;

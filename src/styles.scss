@@ -26,3 +26,15 @@
 .cr {
   cursor: pointer !important;
 }
+
+// Special Offers Section
+section {
+  .secondTitle {
+    font-family: $font-barlow;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: $color-secondary;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
