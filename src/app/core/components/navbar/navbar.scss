@@ -1,0 +1,159 @@
+@use "../../../../styles/fonts" as *;
+@use "../../../../styles/variables" as *;
+
+nav {
+  position: absolute;
+  z-index: 999;
+
+  .navbar-brand {
+    background-color: $color-primary;
+    padding: 7px 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    img {
+      max-width: 150px;
+      height: auto;
+      @media (min-width: 768px) {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    @media (max-width: 991.98px) {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-weight: 700;
+  color: $color-white;
+  font-family: $font-barlow;
+  margin-inline: 10px;
+  transition: color 0.5s ease;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.active {
+  color: $color-primary !important;
+}
+
+.navbar-toggler {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  border: none !important;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(263deg, $color-primary 0%, $color-gray 100%);
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0px;
+  top: 10px;
+}
+
+/* State when the navbar is collapsed */
+.navbar-toggler.collapsed {
+  .top-bar {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  .middle-bar {
+    opacity: 1;
+  }
+
+  .bottom-bar {
+    top: 20px;
+    transform: rotate(0deg);
+  }
+}
+
+/* when navigation is clicked */
+.navbar-toggler:not(.collapsed) {
+  .top-bar {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+
+  .middle-bar {
+    opacity: 0;
+  }
+
+  .bottom-bar {
+    top: 10px;
+    transform: rotate(-135deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-top: 0.5rem;
+
+    .nav-item {
+      margin: 0.25rem 0;
+    }
+  }
+}
+
+.navbar {
+  .dropdown-menu {
+    background-color: $color-white;
+    border: 1px solid $color-light-gray;
+
+    @media (max-width: 991.98px) {
+      background-color: transparent;
+      border: none;
+      padding-left: 1rem;
+    }
+
+    .dropdown-item {
+      color: $color-primary;
+      transition: all 0.5s ease;
+
+      &:hover,
+      &:focus {
+        background-color: $color-primary;
+        color: white;
+      }
+    }
+
+    .dropdown-divider {
+      border-color: $color-gray;
+    }
+  }
+
+  .dropdown-toggle {
+    &::after {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:not(.collapsed)::after {
+      transform: rotate(-180deg);
+    }
+  }
+}

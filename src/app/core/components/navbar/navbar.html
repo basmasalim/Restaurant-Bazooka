@@ -1,1 +1,75 @@
-<p>navbar works!</p>
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-transparent w-100 top-0 pt-0 mt-0"
+>
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="images/footer/icon.png" width="200" alt="icon" />
+    </a>
+    <button
+      class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="toggler-icon top-bar"></span>
+      <span class="toggler-icon middle-bar"></span>
+      <span class="toggler-icon bottom-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/home"
+            routerLinkActive="active"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/menu" routerLinkActive="active"
+            >Menu</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#" routerLinkActive="active">Cart</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-white"
+            href="#"
+            id="authDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="svg/profile-round-1342-svgrepo-com.svg"
+              width="30"
+              alt="profile"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="authDropdown"
+          >
+            <li><a class="dropdown-item" routerLink="#">Login</a></li>
+            <li><a class="dropdown-item" routerLink="#">Register</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" routerLink="#">Profile</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link m-0 p-0" routerLink="#">
+            <img src="images/navbar/arabic.png" width="45" alt="arabic" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
