@@ -1,1 +1,70 @@
-<p>footer works!</p>
+<footer>
+  <div class="container">
+    <div class="footer-icon">
+      <span class="line"></span>
+      <img src="images/footer/icon.png" alt="" />
+      <span class="line"></span>
+    </div>
+    <div class="footer-content">
+      <div class="row">
+        @for (item of footerWidgets; track $index) {
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-widget footer-two-widget text-center">
+            <h3 class="widget-title barlow-font text-white fw-bold">
+              {{ item.title }}
+            </h3>
+            <div class="textwidget">
+              <p>
+                {{ item.description[0] }} <br />
+                {{ item.description[1] }}<br />
+                {{ item.description[2] }}
+
+                <strong
+                  ><a href="tel:123-456-7890">{{ item.phone }}</a></strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        }
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-icons mt-1 py-4">
+      <div class="row justify-content-around align-items-center">
+        <!-- Footer Links -->
+        <div class="col-lg-6">
+          <ul
+            class="social-icons d-flex justify-content-center align-items-center list-unstyled gap-4"
+          >
+            @for (link of footerLinks; track $index) {
+            <li>
+              <a routerLink="{{ link.url }}">
+                <p>{{ link.label }}</p>
+              </a>
+            </li>
+            }
+          </ul>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="col-lg-6">
+          <ul
+            class="social-icons d-flex justify-content-center align-items-center list-unstyled gap-3"
+          >
+            @for ( icon of socialIcons; track $index) {
+            <li>
+              <a href="{{ icon.url }}" target="_blank">
+                <span class="{{ icon.platform }}">
+                  <img src="{{ icon.iconPath }}" alt="{{ icon.platform }}" />
+                </span>
+              </a>
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

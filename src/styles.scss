@@ -3,6 +3,11 @@
 @use "./styles/_fonts" as *;
 @use "swiper/swiper-bundle.min.css";
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .primary-color {
   color: $color-primary;
 }

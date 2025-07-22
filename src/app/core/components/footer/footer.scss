@@ -1,0 +1,116 @@
+@use "../../../../styles/fonts" as *;
+@use "../../../../styles/variables" as *;
+
+footer {
+  background: url("/images/footer/footer_bg.png") no-repeat center/cover;
+  background-color: #1b1b1b;
+  padding-top: 80px;
+  margin-top: 80px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 100%;
+    background-image: url("/images/footer/shape-down.png");
+    height: 40px;
+    background-repeat: no-repeat;
+  }
+
+  .footer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .line {
+      width: 500px;
+      height: 1px;
+      background-color: $color-dark-gray;
+      margin: 0 30px;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  .footer-content {
+    margin-top: 50px;
+    .textwidget {
+      color: $color-gray;
+      margin-top: 10px;
+      p {
+        margin-inline: auto;
+        font-size: 14px;
+        strong {
+          color: $color-yellow;
+          font-weight: 700;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .footer-line {
+    width: 95%;
+    height: 1px;
+    margin-inline: auto;
+    background-color: $color-dark-gray;
+    margin-top: 30px;
+  }
+
+  .footer-icons {
+    .social-icons {
+      color: $color-gray;
+      font-size: 14px;
+      li {
+        a {
+          p {
+            transition: color 0.5s ease-in-out;
+            &:hover {
+              color: $color-primary;
+            }
+          }
+          span {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f1f1f1;
+            transition: 0.3s ease-in-out;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+
+            &.facebook {
+              background-color: #3b5998;
+            }
+
+            &.instagram {
+              background-color: #e4405f;
+            }
+
+            &.twitter {
+              background-color: #55acee;
+            }
+
+            &.youtube {
+              background-color: #cd201f;
+            }
+          }
+
+          &:hover span {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
